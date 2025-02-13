@@ -1,17 +1,13 @@
-# Projetos
+# 🚀 Projetos de Programação | Matheus B. Rezende
 
-Este repositório contém diversos projetos desenvolvidos para praticar e aplicar conhecimentos de programação. Os projetos aqui são diversos, abordando diferentes tecnologias e conceitos.
+[![Licença MIT](https://img.shields.io/badge/Licença-MIT-blue.svg)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/MatheusBRezende/Projetos?style=social)](https://github.com/MatheusBRezende/Projetos/stargazers)
+[![Último Commit](https://img.shields.io/github/last-commit/MatheusBRezende/Projetos)](https://github.com/MatheusBRezende/Projetos/commits/main)
 
-## Projetos
+Bem-vindo ao meu repositório de projetos! Aqui você encontrará uma coleção de programas, scripts e aplicações desenvolvidos para praticar e demonstrar habilidades em diferentes linguagens e tecnologias.
 
-- **Calculadora Online**: Uma simples calculadora de operações básicas.
-- **Gerador de Senha**: Um gerador de senhas seguras.
-- **Gerador de Cor**: Ferramenta para gerar cores aleatórias.
-- **Jogo da Velha**: Implementação do clássico jogo da velha.
-- **Relógio Digital**: Um relógio digital simples para exibição de hora.
+---
 
-## Como rodar os projetos
+## 📂 Estrutura do Repositório
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/MatheusBRezende/Projetos.git
+Os projetos estão organizados em pastas por linguagem/tipo. Exemplo:
