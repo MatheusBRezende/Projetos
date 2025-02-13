@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Gerador de Senha</title>
+</head>
+<body>
+    <!-- Background Animado -->
+    <div class="wrapper">
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <i class="fas fa-key header-icon"></i>
+            <h1>Gerador de Senha</h1>
+            <p>Personalize as opções para criar sua senha</p>
+        </div>
+
+        <div class="card-content">
+            <!-- Password Display -->
+            <div class="password-display">
+                <div class="password-field">
+                    <i class="fas fa-lock field-icon"></i>
+                    <input type="text" id="password-output" readonly placeholder="Sua senha aparecerá aqui">
+                    <button id="copy-btn" class="icon-button" disabled title="Copiar senha">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+                <div class="password-strength" id="password-strength">
+                    <div class="strength-bar"></div>
+                    <span class="strength-text">Força da senha</span>
+                </div>
+            </div>
+
+            <!-- Length Control -->
+            <div class="length-control">
+                <div class="length-header">
+                    <label for="length-slider">
+                        <i class="fas fa-text-width"></i>
+                        Comprimento da senha
+                    </label>
+                    <span id="length-value" class="length-badge">12</span>
+                </div>
+                <input type="range" id="length-slider" min="4" max="32" value="12">
+            </div>
+
+            <!-- Options -->
+            <div class="options-grid">
+                <div class="option">
+                    <input type="checkbox" id="uppercase" checked>
+                    <label for="uppercase">
+                        <i class="fas fa-font"></i>
+                        Maiúsculas
+                    </label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="lowercase" checked>
+                    <label for="lowercase">
+                        <i class="fas fa-text-size"></i>
+                        Minúsculas
+                    </label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="numbers" checked>
+                    <label for="numbers">
+                        <i class="fas fa-hashtag"></i>
+                        Números
+                    </label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="symbols" checked>
+                    <label for="symbols">
+                        <i class="fas fa-at"></i>
+                        Símbolos
+                    </label>
+                </div>
+            </div>
+
+            <!-- Generate Button -->
+            <button id="generate-btn" class="generate-button">
+                <i class="fas fa-spinner fa-spin loading-icon hidden"></i>
+                <i class="fas fa-wand-magic-sparkles btn-icon"></i>
+                <span>Gerar Senha</span>
+            </button>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <button class="action-button" id="refresh-btn" title="Gerar nova senha">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+                <button class="action-button" id="clear-btn" title="Limpar senha">
+                    <i class="fas fa-trash"></i>
+                </button>
+                <button class="action-button" id="info-btn" title="Informações">
+                    <i class="fas fa-info-circle"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle toast-icon"></i>
+            <div class="toast-text">
+                <span class="toast-title">Senha copiada!</span>
+                <span class="toast-description">A senha foi copiada para sua área de transferência.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Informações -->
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-shield-alt"></i> Dicas de Segurança</h2>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <ul class="tips-list">
+                    <li><i class="fas fa-check"></i> Use senhas com pelo menos 12 caracteres</li>
+                    <li><i class="fas fa-check"></i> Combine letras, números e símbolos</li>
+                    <li><i class="fas fa-check"></i> Evite informações pessoais</li>
+                    <li><i class="fas fa-check"></i> Use senhas diferentes para cada conta</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Cores Aleatórias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .color-display {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            border: 2px solid #000;
+            border-radius: 10px;
+        }
+
+        #color-code {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Cores Aleatórias</h1>
+        <div id="color-display" class="color-display"></div>
+        <p id="color-code">Código da Cor: #FFFFFF</p>
+        <button id="generate-btn">Gerar Cor</button>
+    </div>
+
+    <script>
+        
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Função para atualizar a cor exibida na tela
+        function updateColor() {
+            const colorDisplay = document.getElementById('color-display');
+            const colorCode = document.getElementById('color-code');
+            const randomColor = getRandomColor();
+
+            colorDisplay.style.backgroundColor = randomColor;
+            colorCode.textContent = `Código da Cor: ${randomColor}`;
+        }
+
+        // Adiciona um evento de clique ao botão para gerar uma nova cor
+        document.getElementById('generate-btn').addEventListener('click', updateColor);
+
+        // Gera uma cor aleatória ao carregar a página
+        updateColor();
+    </script>
+</body>
+</html>
